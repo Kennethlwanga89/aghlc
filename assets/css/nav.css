@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: nunito;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+/* This styling affects the topmenu */
+
+.topmenu {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    fill: white;
+    padding: 10px 0;
+}
+
+.topmenu a {
+    text-decoration: none;
+    color: white;
+    padding: 0 8px;
+}
+
+
+
+
+
+/* This styling affects the navbar */
+
+.navbar {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logoImg {
+    width: clamp(30px, 75px, 90px);
+    aspect-ratio: 1/1;
+    margin-right: 10px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+
+
+
+/* This styling is for media queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .heading, .links, .topmenu {
+        display: none;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .links {
+        display: none;
+    }
+    .navbar {
+        padding: 0 20px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .ham, .heading {
+        display: none;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
