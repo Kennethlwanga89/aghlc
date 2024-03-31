@@ -73,9 +73,13 @@
         </div>
 
         <div class="ham">
-            <p><svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
-                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                </svg></p>
+            <div type="button" title="#" id="ham">
+                <label for="nav-toggle">
+                    <p><svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></p>
+                </label>
+            </div>
         </div>
         <div class="close hidden">
             <p><svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34">
@@ -90,49 +94,55 @@
 
 
     <!-- This section is the mobile navbar -->
-    <div class="hidden">
-        <div class="mobileLinks">
-            <div><a title="#" href="/assets/pages/home.html">HOME</a></div>
-            <div><a title="#" href="/assets/pages/about.html">ABOUT US</a></div>
-            <div><a title="#" href="/assets/pages/sermons.html">SERMONS</a></div>
-            <div><a title="#" href="/assets/pages/ministries.html">MINISTRIES</a></div>
-            <div><a title="#" href="/assets/pages/contact.html">CONTACT US</a></div>
-            <div><a title="#" href="/assets/pages/contact.html">DONATE</a></div>
-            <div><a title="#" href="/assets/pages/broadcast.html">BROADCAST</a></div>
-        </div>
-        <div class="mobileSocial">
-            <div class="icon">
-                <p>
-                    <?xml version="1.0" ?>
-                    <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-                    <svg enable-background="new 0 0 64 64" height="24px" id="Layer_1" version="1.1" viewBox="0 0 64 64"
-                        width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <path
-                            d="M32,7.174C18.311,7.174,7.174,18.311,7.174,32c0,13.689,11.137,24.826,24.826,24.826c13.689,0,24.826-11.137,24.826-24.826  C56.826,18.311,45.689,7.174,32,7.174z M38.174,32.874h-4.039c0,6.453,0,14.398,0,14.398h-5.985c0,0,0-7.868,0-14.398h-2.845v-5.088  h2.845v-3.291c0-2.357,1.12-6.04,6.04-6.04l4.433,0.017v4.939c0,0-2.695,0-3.219,0c-0.524,0-1.268,0.262-1.268,1.386v2.99h4.56  L38.174,32.874z" />
-                    </svg>
-                </p>
+    <div class="mobileNav">
+        <input title="." type="checkbox" class="nav-toggle" id="nav-toggle">
+        <div class="hidden">
+            <div class="mobileLinks">
+                <div><a title="#" href="/assets/pages/home.html">HOME</a></div>
+                <div><a title="#" href="/assets/pages/about.html">ABOUT US</a></div>
+                <div><a title="#" href="/assets/pages/sermons.html">SERMONS</a></div>
+                <div><a title="#" href="/assets/pages/ministries.html">MINISTRIES</a></div>
+                <div><a title="#" href="/assets/pages/contact.html">CONTACT US</a></div>
+                <div><a title="#" href="/assets/pages/contact.html">DONATE</a></div>
+                <div><a title="#" href="/assets/pages/broadcast.html">BROADCAST</a></div>
             </div>
-            <div class="iconName">
-                <a title="#" href="" <p>Facebook</p></a>
-            </div>
-            <div class="icon">
-                <p>
-                    <?xml version="1.0" ?>
-                    <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-                    <svg height="24px"
-                        style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
-                        version="1.1" viewBox="0 0 512 512" width="24px" xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <path
-                            d="M501.303,132.765c-5.887,-22.03 -23.235,-39.377 -45.265,-45.265c-39.932,-10.7 -200.038,-10.7 -200.038,-10.7c0,0 -160.107,0 -200.039,10.7c-22.026,5.888 -39.377,23.235 -45.264,45.265c-10.697,39.928 -10.697,123.238 -10.697,123.238c0,0 0,83.308 10.697,123.232c5.887,22.03 23.238,39.382 45.264,45.269c39.932,10.696 200.039,10.696 200.039,10.696c0,0 160.106,0 200.038,-10.696c22.03,-5.887 39.378,-23.239 45.265,-45.269c10.696,-39.924 10.696,-123.232 10.696,-123.232c0,0 0,-83.31 -10.696,-123.238Zm-296.506,200.039l0,-153.603l133.019,76.802l-133.019,76.801Z"
-                            style="fill-rule:nonzero;" />
-                    </svg>
-                </p>
+            <div class="mobileSocial">
+                <div class="icon">
+                    <p>
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg
+                            PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                        <svg enable-background="new 0 0 64 64" height="24px" id="Layer_1" version="1.1"
+                            viewBox="0 0 64 64" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path
+                                d="M32,7.174C18.311,7.174,7.174,18.311,7.174,32c0,13.689,11.137,24.826,24.826,24.826c13.689,0,24.826-11.137,24.826-24.826  C56.826,18.311,45.689,7.174,32,7.174z M38.174,32.874h-4.039c0,6.453,0,14.398,0,14.398h-5.985c0,0,0-7.868,0-14.398h-2.845v-5.088  h2.845v-3.291c0-2.357,1.12-6.04,6.04-6.04l4.433,0.017v4.939c0,0-2.695,0-3.219,0c-0.524,0-1.268,0.262-1.268,1.386v2.99h4.56  L38.174,32.874z" />
+                        </svg>
+                    </p>
+                </div>
+                <div class="iconName">
+                    <a title="#" href="" <p>Facebook</p></a>
+                </div>
+                <div class="icon">
+                    <p>
+                        <?xml version="1.0" ?>
+                        <!DOCTYPE svg
+                            PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                        <svg height="24px"
+                            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
+                            version="1.1" viewBox="0 0 512 512" width="24px" xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path
+                                d="M501.303,132.765c-5.887,-22.03 -23.235,-39.377 -45.265,-45.265c-39.932,-10.7 -200.038,-10.7 -200.038,-10.7c0,0 -160.107,0 -200.039,10.7c-22.026,5.888 -39.377,23.235 -45.264,45.265c-10.697,39.928 -10.697,123.238 -10.697,123.238c0,0 0,83.308 10.697,123.232c5.887,22.03 23.238,39.382 45.264,45.269c39.932,10.696 200.039,10.696 200.039,10.696c0,0 160.106,0 200.038,-10.696c22.03,-5.887 39.378,-23.239 45.265,-45.269c10.696,-39.924 10.696,-123.232 10.696,-123.232c0,0 0,-83.31 -10.696,-123.238Zm-296.506,200.039l0,-153.603l133.019,76.802l-133.019,76.801Z"
+                                style="fill-rule:nonzero;" />
+                        </svg>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
+    <script src="/assets/javascript/nav.js"></script>
 </body>
 
 </html>

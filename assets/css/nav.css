@@ -11,6 +11,14 @@
     display: none;
 }
 
+a {
+    font-weight: 700;
+}
+
+button {
+    border: none;
+}
+
 
 
 
@@ -74,6 +82,39 @@
 
 
 
+
+/* This styling is for the ham button toggle */
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle:checked ~ div {
+    display: block;
+}
+
+
+
+
+/* This styling os for the mobile nav */
+
+.mobileNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.mobileLinks a {
+    text-decoration: none;
+    margin: 210px;
+}
+
+
+
+
 /* This styling is for media queries */
 
 /* Extra small devices (phones, 600px and down) */
@@ -89,7 +130,12 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
+    .links {
+        display: none;
+    }
+    .navbar {
+        padding: 0 20px;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -106,6 +152,13 @@
 @media only screen and (min-width: 992px) {
     .ham, .heading {
         display: none;
+    }
+
+    .links {
+        display: flex;
+    }
+    .navbar {
+        padding: 0 100px;
     }
 }
 
