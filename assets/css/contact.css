@@ -3,6 +3,50 @@
     body{
       background-image: url(assets/Images/Screenshot-2023-12-04-212558.png);
     }
+
+    /* the top images */
+.container {
+  position: relative;
+  width: 1000px;
+  margin-left: 120px;
+  height: 600px;
+  overflow: hidden;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0 0 20px rgba(0,0,225,0.5);
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+.slide img {
+  width: 100%;
+  height: auto;
+  filter: brightness(70%);
+  transition: transform 1s ease;
+}
+.text {
+  position: absolute;
+  bottom: -50px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+  animation: slideInText 1.5s forwards; 
+}
+
+@keyframes slideInText {
+  from { bottom: -50px; }
+  to { bottom: 200px; } 
+}
+/* its css end */
   .container {
     max-width: 400px;
     margin: 50px auto;

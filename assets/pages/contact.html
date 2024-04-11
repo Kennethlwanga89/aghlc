@@ -6,14 +6,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
   <link rel="stylesheet" href="/assets/css/contact.css">
+  <!-- javascrip codes for the top images -->
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const texts = document.querySelectorAll('.text');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+      slides.forEach((slide, i) => {
+          if (i === index) {
+              slide.style.display = 'block';
+              texts[i].style.display = 'block';
+          } else {
+              slide.style.display = 'none';
+              texts[i].style.display = 'none';
+          }
+      });
+  }
+
+  function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].querySelector('img').style.transform = 'translateX(100%)';
+      texts[currentSlide].style.animation = 'slideInText 1.5s forwards'; 
+      setTimeout(() => {
+          slides[currentSlide].querySelector('img').style.transform = 'translateX(0)';
+          showSlide(currentSlide);
+      }, 500); 
+  }
+
+  setInterval(nextSlide, 3000);
+</script>
+
+<!-- javascript end for the top images -->
+
 </head>
 
 <body>
   <!-- This menu will be default across all pages in the website -->
   <div w3-include-html="/assets/pages/nav.html"></div>
 
-  
-
+  <!-- the top images -->
+  <div class="container">
+    <div class="slider">
+        <div class="slide">
+            <img src="pexels-media-1431822.jpeg" alt="Image 1">
+            <div class="text">Taking practical faith <br> gospel to the entire world</div>
+        </div>
+        <div class="slide">
+            <img src="pexels-media-6794934.jpeg" alt="Image 2">
+            <div class="text">Showing compassion to others</div>
+        </div>
+        <div class="slide">
+            <img src="pexels-media-1431822.jpeg" alt="Image 3">
+            <div class="text">Showing amazing grace and <br> Godly mercy to all the people</div>
+        </div>
+        <div class="slide">
+            <img src="pexels-media-1431822.jpeg" alt="Image 4">
+            <div class="text">Experiencing Divine ecounter with the Holy spirit</div>
+        </div>
+    </div>
+</div>
+<!-- end of top images html codes -->
 
   <div class="end" style="letter-spacing: 3px;">
     <h2>Contact Us</h2>
@@ -90,6 +143,8 @@
 
     <H3>OFF GAYAZA KALAGI ROAD <BR> KABBUBU,KAMPALA, UGANDA</BR></H3>
   </div>
+   <br>
+   <br>
   <div class="end">
     <h6>2024 AMAZING GRACE HOPE LIVING CHURCH NALYAMAGONJA| SHOW ING GODLY MERCY TO THE REST OF THE WORLD ALL RIGHTS
       RESERVED</h6>

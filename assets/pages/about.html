@@ -4,7 +4,347 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+
+   
 </head>
+
+<!-- javascrip codes for the top images -->
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const texts = document.querySelectorAll('.text');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.style.display = 'block';
+                texts[i].style.display = 'block';
+            } else {
+                slide.style.display = 'none';
+                texts[i].style.display = 'none';
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].querySelector('img').style.transform = 'translateX(100%)';
+        texts[currentSlide].style.animation = 'slideInText 1.5s forwards'; 
+        setTimeout(() => {
+            slides[currentSlide].querySelector('img').style.transform = 'translateX(0)';
+            showSlide(currentSlide);
+        }, 500); 
+    }
+
+    setInterval(nextSlide, 3000);
+</script>
+
+<!-- javascript end for the top images -->
+
+<style>
+
+body{
+    padding: 0;
+    margin: 0;
+    /* background-image: url(g.jpeg); */
+    background-color: #fff;
+}
+
+/* the top images */
+.container {
+        position: relative;
+        width: 1000px;
+        margin-left: 120px;
+        height: 600px;
+        overflow: hidden;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 30px;
+        box-shadow: 0 0 20px rgba(0,0,225,0.5);
+    }
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+    .slide {
+        width: 100%;
+        flex-shrink: 0;
+        position: relative;
+    }
+    .slide img {
+        width: 100%;
+        height: auto;
+        filter: brightness(70%);
+        transition: transform 1s ease;
+    }
+    .text {
+        position: absolute;
+        bottom: -50px; 
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: none;
+        animation: slideInText 1.5s forwards; 
+    }
+
+    @keyframes slideInText {
+        from { bottom: -50px; }
+        to { bottom: 200px; } 
+    }
+    /* its css end */
+
+.about{
+    padding: 3px;
+    margin-top: 50px;
+    margin-left: 5px;
+    border-left: 4px solid orange;
+   border-radius: 10px;
+   text-align: left;
+}
+
+.vision{
+    padding: 3px;
+    margin-top: 50px;
+    margin-left: 35px;
+    border: transparent ;
+    background-color: aqua;
+    border-bottom-left-radius: 20px ;
+    border-top-right-radius: 20px;
+    width: 700px;
+    /* box-shadow: 0 0 20px blue, 0 0 40px pink; */
+    
+}
+
+.mission {
+    padding: 3px;
+    margin-top: 50px;
+    margin-left: 35px;
+    border: transparent ;
+    background-color: palevioletred;
+    border-bottom-left-radius: 20px ;
+    border-top-right-radius: 20px;
+    width: 700px;
+    /* box-shadow: 0 0 20px blue, 0 0 40px pink; */
+}
+
+.leader{
+    padding: 3px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-left: 4px solid orange;
+   border-radius: 10px;
+   text-align: left;
+}
+
+.pastors{
+    padding: 3px;
+    margin-top: 50px;
+    margin-left: 70px;
+   border-radius: 10px;
+   text-align: left;
+}
+
+.leaders{
+    padding: 3px;
+    margin-top: 50px;
+    margin-left: 120px;
+   border-radius: 10px;
+   text-align: left;
+}
+
+.minisrty{
+    padding: 3px;
+    margin-top: 25px;
+    margin-left: 200px;
+    border-top: 1px solid aqua;
+    border-bottom: 1px solid aqua;
+    border-left: 4px solid aqua;
+    border-right: 4px solid aqua;
+    text-align: center;
+    width: 700px;
+   border-radius: 10px;
+   text-align: left;
+}
+h3{
+    color: rgb(21, 21, 46);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.branch{
+    padding: 3px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-left: 4px solid purple;
+   border-radius: 10px;
+   text-align: left
+}
+
+.Programmes{
+    padding: 3px;
+    margin-top: 25px;
+    margin-left: 200px;
+    border-top: 1px solid aqua;
+    border-bottom: 1px solid aqua;
+    border-left: 4px solid aqua;
+    border-right: 4px solid aqua;
+    text-align: center;
+    width: 700px;
+   border-radius: 10px;
+   text-align: left;
+}
+
+
+.Plans{
+    padding: 3px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-left: 4px solid yellow;
+   border-radius: 10px;
+   text-align: left
+}
+
+.history{
+    padding: 3px;
+    margin-top: 50px;
+    margin-left: 120px;
+    border-left: 4px solid rgb(109, 70, 70);
+   border-radius: 10px;
+   text-align: left
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+box-shadow: 0 0 20px blue, 0 0 40px pink;
+    
+boarder=/* box-shadow: inset  0 0 40px pink; */
+  }
+  
+  .round-frame {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .round-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .round-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .round-frame:hover::before {
+    opacity: 1;
+  }
+  
+  .round-frame img {
+    transition: transform 0.3s ease;
+  }
+  
+  .round-frame:hover img {
+    transform: scale(1.1);
+  }
+
+  /* footer */
+  .location1{
+    text-align: center;
+    letter-spacing: 3px;
+  }
+  
+  .subscribe
+  {
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  
+  .location2{
+    text-align: right;
+    letter-spacing: 5px;
+  }
+  
+  .end{
+    text-align: center;
+    letter-spacing: 5px;
+  }
+  
+  .social{
+    text-align: center;
+  
+  }
+  a{
+    padding: 10px;
+    color: blue;
+   
+  }
+  a:hover{
+  background-color: orange;
+  }
+  
+  
+  .container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      
+  }
+  
+  h2 {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  
+  form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+  }
+  
+  button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+      background-color: orange;
+  }
+  /* end of footer */
+
+
+</style>
+
+
 <body>
     <!-- This menu will be default across all pages in the website -->
     <div w3-include-html="/assets/pages/nav.html"></div>
@@ -14,5 +354,337 @@
     <script>
         includeHTML();
       </script>
+ 
+ <div class="container">
+    <div class="slider">
+        <div class="slide">
+            <img src="pexels-media-1431822.jpeg" alt="Image 1">
+            <div class="text">Taking practical faith <br> gospel to the entire world</div>
+        </div>
+        <div class="slide">
+            <img src="pexels-media-6794934.jpeg" alt="Image 2">
+            <div class="text">Showing compassion to others</div>
+        </div>
+        <div class="slide">
+            <img src="pexels-media-1431822.jpeg" alt="Image 3">
+            <div class="text">Showing amazing grace and <br> Godly mercy to all the people</div>
+        </div>
+        <div class="slide">
+            <img src="pexels-media-1431822.jpeg" alt="Image 4">
+            <div class="text">Experiencing Divine ecounter with the Holy spirit</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="about">
+      <h2>About Amaizing Grace Hope Living Church Nalyamagonja</h2>
+      <p>The lord has a burden upone Pastor Harriet Serunjoji and pastor Joel Serunjoji to help people encounter God's presence through the power of the holy spirit.
+        In 1998 Amaizing Grace Hopeliving church was planted in obedience to the voice and call of God. </p>
+</div>
+
+<div class="history">
+<h2>Church History</h2>
+<p>
+  Amazing Grace Hope Living Church  started as an apostolic church because the leader of the time had hoped that the apostolic Ministry of Bishop Kamya would offer him support. He had served in the same ministry. God brought Br. Male, Br. Samson Bumba from Eden Revival Church Kanyanya branch in 1998, and Br. Kakutu a Mukonjo from Kasese.
+By then, the community regarded the Church as Kiberu’s shrine. It was fully based on the family. The pastor an elder brother (Pr. Kiberu), his brother Bathremew Seggane was deacon, his other brother Kiwanuka Nsubuga Charles also a deacon, as the wife was an elder, his other “Balamus” sisters in law were sheep and choir leaders.  
+Pr. Harriet by then was prayer leader. Led by the spirit of God, we went to Miracle Valley Ministry for parenting where we were welcomed with open hearts, the new people who joined church started believing God for the changes  that must make the church go beyond the family level. In early 1999, there was disintegration of the group- some went to Nalumuli, others to other places. Pastor Kiberu remained alone with his wife and Elder Harrriet Nakyeyune. 
+ We changed our address to Nalyamagonja Miracle Valley Church, Paul Kiviiri was marvelous. He loved us and we started relating with Pastor Paddy of Nakasongola,Rev. Racheal Iwagira, Pr. Serunkuuma and many others. Thank you for being there for us.
+In late 2000, Pr. Kiberu left for Kiboga without bidding farewell to the the church.
+Pastor Male took us through 2001 but also left us to Kikyusa for ministry which we had prayed for for over four years. ( this is how seek God for guidance) we were led to fast , and ask God for another pastor after 200days of prayer, Pr. Harriet receives a vision of the ministry.
+We continued nursing the BABY Amazing Grace Ministry while under Miracle valley church, after several meetings of how to renew the ministry of Miracle Valley, the leaders hit a rock and were willing to continue with unrenewed Ministry. We requested for permission to leave and nurture Amazing Grace and it was granted to us.
+It was after this that we registered for Amazing Grace Ministry but the name had been registered by others. This required us to add Hope living Church Nalyamagonja and currently AMAZING GRACE MIRACLE VALLEY CHURCH.
+As told by Pr Harriet.
+
+</p>
+
+</div>
+
+<div class="vision">
+    <h2>VISION</h2>
+    <P>	To show compassion to others. <br>
+        	To show amazing grace and Godly mercy to all people irrespective of their religion, faith, political affiliation, color or race.
+        </P>
+
+</div>
+
+<div class="mission">
+    <h2>MISSION</h2>
+    <p>
+        Taking practical faith and gospel to the entire globe especially to the very rural setting through; <br>Setting up prayer alters.
+    </p>
+</div>
+<div class="pastors">
+<h2>Our Leadership Team</h2>
+
+<h3>Pastor Harriet Serunjoji</h3>
+<div class="container">
+    <div class="round-frame">
+      <img src="Screenshot-2023-12-04-211441.png" alt="Image">
+    </div>
+  </div>
+<p class="leader">As Leader Pastor of  Amazing Grace , Pastor Harriet  Serunjoji <br>
+     is known for she practical biblical teaching, his visionary leadership, <br>
+      and her passion to help people coming to know Christ, getting planted in God’s house, <br>
+       and becoming transformational leaders who work together to build a God-first culture. <br>
+    Harriet’s authenticity and ability to communicate the truth of God’s Word in a humorous, <br>
+    dynamic, and revelatory manner helps people understand the Bible and how to apply its teachings <br> 
+    to their everyday lives.
+     </p>
+
+     <h3>Pastor Joel Serunjoji</h3>
+     <div class="container">
+        <div class="round-frame">
+          <img src="Screenshot-2023-12-04-212558.png" alt="Image">
+        </div>
+      </div>
+<p class="leader">He is one of the pastors that  we have , he is the husband of pastor Harriet Serunjoji <br>
+    He has worked hard to do the work of God ever since he joined us . <br>
+    he is always helping His Dear wife in the running of,<br>
+    Amaizing Grace Hope Living Ministry
+     </p>
+
+     <h3>Pastor Deo Kasozi</h3>
+     <div class="container">
+        <div class="round-frame">
+          <img src="Screenshot-2023-12-04-212928.png" alt="Image">
+        </div>
+      </div>
+<p class="leader">He is a briliant and hard working leader, He has dedicated his life to <br>
+     serve God under all conditions . He is always leading in deliverency services <br>
+     and has led many people to get free for demonic possesions
+     </p>
+
+     <h3>Pastor teddy Nantale</h3>
+     <div class="container">
+        <div class="round-frame">
+          <img src="Screenshot-2023-12-04-213715.png" alt="Image">
+        </div>
+      </div>
+<p class="leader">She is a welcoming leader always ready to listen to all people of all classes. <br>
+    Her kind and sothing counciling has led to the healing of many broken hearts
+     </p>
+
+     <h3>Pastor patrick</h3>
+     <div class="container">
+        <div class="round-frame">
+          <img src="Screenshot-2023-12-06-090036.png" alt="Image">
+        </div>
+      </div>
+<p class="leader">He is a deligent leader always comitted to deliver God’s word in its fullness <br>
+    since the word of God is the only wepon that we have as born again to over come every trials <br>
+    and temptations and demonic possesions
+     </p>
+
+    </div>
+
+    
+     <h2 style="text-align: center;">Ministry Leadeship</h2>
+     <br>
+     <div class="minisrty">
+     <h3  >Evangelism Ministry</h3>
+     <p >This is lead by Pr. Joel and Gorretie Mutwongere and they have been deligent in their work <br>
+    ensuring that the gospel goes far and wide by all means  </p>
+</div>
+
+<div class="minisrty">
+<h3 >Discipleship Ministry</h3> 
+<p >This lead by Pr.  Deo Kasozi who has natured youths to serve God  with love</p>
+</div>
+
+<div class="minisrty">
+<h3>Kingdom Investors Ministry</h3>
+<p >This lead by  Ms. Esther Naluyima who is commited to her work from day One</p>
+</div>
+
+<div class="minisrty">
+<h3 > Church Elders</h3>
+<p >Mr. Mutwogere Henry and Ms. Justine Mukasa are the church leaders that have ensured the proper <br>
+running of the church activities and the church services</p>
+</div>
+
+<div class="minisrty">
+<h3 >Finance Ministry</h3>
+<p >Mr. Henry Mutwongere and Sr. Faridah Namutebi are the finance ministers that we have who have ensured that <br>
+Church money is propery used and they give yearly  financial accountability </p>
+</div>
+
+<div class="minisrty">
+<h3 >Children’s Minstry</h3>
+<p >Farida Namutebi is a kind and commited leader who has dedicated her love to serve God <br>
+by training the young generation inline with the Godly manuer that led to God fearing youths</p>
+</div>
+
+<div class="minisrty">
+<h3 >Praise and Worship Ministry</h3>
+<p >This ministryis is led by AchioStella who has plaid a very vital role in the praise and Worship <br> 
+at church she has trained many young people in singing and has set a remakeable legacy <br>
+for the rest of the young people to follow</p>
+</div>
+
+<div class="minisrty">
+<h3>Women Ministry</h3>
+<p >Ms. Justine Nabulya is the leader in charge of this minisrty and she has commited her life to serving God through <br>
+counciling women of all ages and also having regular services <br>
+ to strengthen the entire congregation of the women </p>
+</div>
+
+ <div class="minisrty">
+ <h3>Men’s ministry</h3>
+ <p >This minisry is headed by Pr. Deo Kasozi who has been a vibrant pillar in the entire ministry <br>
+He has ensured a monthly men's confrence which has helped the men spiritual and physically </p>
+</div>
+
+<div class="minisrty">
+<h3 >Good Samaritan Ministry</h3>
+<p >This ministry emerged from the church mission of taking practical faith and gospel to the entire globe <br>
+this minisrty is headed by Ms. Justine Nabulya who directly supervises all its activities <br>
+which include providing the necessities to the needy who include ealderly people ,ophans ,widows among others</p>
+</div>
+
+<div class="minisrty">
+<h3 >Youths Ministry</h3>
+<p >Achio Stella is the leader of the youths minisrty and as plaid  a remarkeable role in naturing the teenagers into a <br>
+God fearing generation of the youths</p>
+</div>
+
+<div class="minisrty">
+<h3 >Ushering minisrty</h3>
+<p>Mr. Henry Mutongere is the main leader of the ushering ministry who have plaid a significant role durind church servises <br>
+and also in activities when called upone</p>
+</div>
+
+<div class="minisrty">
+<h3 >Interpreatation ministry</h3>
+<p >This minisrtyis headed by Mrs. Samalie Byabajungu who has plaid a significant role in interpreting God given messages in <br>
+in collabortion with the church elders and or pastrole team</p>
+</div>
+
+<div class="minisrty">
+<h3 >Singles’ministry</h3>
+<p >Mrs. GorrettieMwesigwa is the leader who has worked deligently to educate the single ladies and gentlemen <br>
+     usharing them into marriege </p>
+    </div>
+
+     <div class="minisrty">
+<h3 >Media Department</h3>
+<p >Mr Robert Atwine is the person responsible for all socila media platforms of the church and  also recoding of church services <br>
+for future references and also use . They have worked tirelessly to ensure that servises reach out to the  <br>
+church members who are far away who can't join the services physically</p>
+</div>
+</div>
+
+<div class="branch">
+<h2> Amazing Grace branches</h2>
+<p>Apparently, Amazing Grace has grown and birthed branches following its mission of Setting up prayer alters which  <br>
+    have evolved into churches, these are located in  wakiso, Butalejja, Kaliro, 
+    Mpigi, Mityana <br>and Luwero districts in Uganda.
+    We are a Reigistred church a member of the National Council of Born Agains
+     in Uganda,<br> member of Born Again Faith.  It is pastored by Apostle Harriet N. Sserungoji
+      who is assisted by Pr. Joel Serungoji and Pr. <br> Teddy Nantale together with other pastors and another great 
+      team of women and men of God.
+    </p>
+
+    <h3>Some of our pastrole Pastors with where there base</h3>
+    <p>
+        Pr.Harriet Bumba (Budehe), <br>
+        Pr. Rovinsa Namulwana (Bukemba),<br>                                
+         Pr. Andrew Wandera (Kyani), <br>
+        Pr.Rose and George Cheloba (Butalejja),<br>
+        Pr. Rosemary Kisakye(Lulumbu), <br>
+        Pr. Paul Bakatene (Jjingo),<br>
+        Pr. Charles Nsubuga(Lubira) <br>
+        Pr.George Basanyusa(GODEM) <br>
+        </p>
+    </div>
+
+    <div class="Programmes">
+        <h2>Our Annual Programs</h2>
+        <p>
+            
+•	Conferences <br>
+•	Crusadesbr  <br>
+•	Seminars <br>
+•	Workshops <br>
+•	Family day <br>
+
+        </p>
+    </div>
+
+
+    <div class="Plans">
+    <h2>Future Plans of Amazing Grace Hope Living Church Nalyamagonja</h2>
+    <p>
+1.    Acquiring a much bigger land for the church and ministry Headquarters. <br>
+     Most preferably 2/3 acres of land.
+2.	Construction of the dream church on the said piece of land.
+3.	Acquiring land for the branches and constructing thereon.
+4.	Preparing youths and children for the bigger tasks of rehabilitating the church <br>
+ and nation. Corruption must be got rid of right from the families, churches, society and nation  <br>
+ through youth trainings, skills developments, 
+    </p>
+</div>
+
+<footer>
+<div class="location1">
+    <h4>WE ARE LOCATED </h4>
+    <P>1km off Gayaza kalagi Main Road via Manyangwa Town <br> At Nalyamagonja Trading Center</P>
+    <p>+256774621081</p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="subscribe">
+    <h1>SUBSCRIBE</h1>
+    <div class="container">
+      <h2>Sign Up</h2>
+      <form action="#" method="post" id="subscription-form">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <P>Sign up with your email address to receive <br> news and updates from us</P>
+
+
+    <p>We respect your privacy.</p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="social">
+    <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+    <a href="#"> <ion-icon name="logo-youtube"></ion-icon></a>
+    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+  </div>
+  <br>
+  <br>
+  <div class="location2">
+    <h1>UGANDA</h1>
+
+    <H3>OFF GAYAZA KALAGI ROAD <BR> KABBUBU,KAMPALA, UGANDA</BR></H3>
+  </div>
+   <br>
+   <br>
+  <div class="end">
+    <h6>2024 AMAZING GRACE HOPE LIVING CHURCH NALYAMAGONJA| SHOW ING GODLY MERCY TO THE REST OF THE WORLD ALL RIGHTS
+      RESERVED</h6>
+  </div>
+
+  <!-- This should be the same across all pages for the share navbars to take effect -->
+  <script src="/assets/javascript/nav.js"></script>
+  <script>
+    includeHTML();
+  </script>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</footer>
 </body>
 </html>
