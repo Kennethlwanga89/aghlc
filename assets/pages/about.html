@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalabl=no">
     <title>About Us</title>
 
    
@@ -340,7 +340,11 @@ box-shadow: 0 0 20px blue, 0 0 40px pink;
       background-color: orange;
   }
   /* end of footer */
-
+  @media onlyscreen and (max-width: 600px) {
+  .container {
+    font-size: 14px;
+  }
+}
 
 </style>
 
@@ -355,6 +359,7 @@ box-shadow: 0 0 20px blue, 0 0 40px pink;
         includeHTML();
       </script>
  
+ <div class="content">
  <div class="container">
     <div class="slider">
         <div class="slide">
@@ -624,6 +629,10 @@ church members who are far away who can't join the services physically</p>
  through youth trainings, skills developments, 
     </p>
 </div>
+
+
+</div>
+
 
 <footer>
 <div class="location1">
